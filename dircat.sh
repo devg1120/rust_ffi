@@ -89,16 +89,38 @@ find_subdir() {
       if [[ $subdir =~ .*\.md$ ]]; then
          continue
       fi
-      if [[ $subdir =~ .*\.txt$ ]]; then
+      if [[ $subdir =~ .*\.exe$ ]]; then
          continue
       fi
-      if [ $subdir = "./package-lock.json" ]; then
+      if [[ $subdir =~ .*\.md$ ]]; then
+         continue
+      fi
+      if [[ $subdir =~ .*\.o$ ]]; then
+         continue
+      fi
+      if [[ $subdir =~ .*\.a$ ]]; then
+         continue
+      fi
+      if [[ $subdir =~ .*\.so$ ]]; then
+         continue
+      fi
+      if [ $subdir = "./dircat.sh" ]; then
          continue
       fi
       #echo " " "$subdir" 
       print_filename $subdir 
       if [ $FILE_BODY -eq 1 ]; then
+        if [[ $subdir =~ .*\.c$ ]]; then
+           echo "\`\`\`c"
+        elif [[ $subdir =~ .*\.rs$ ]]; then
+           echo "\`\`\`rust"
+        elif [[ $subdir =~ .*\.sh$ ]]; then
+           echo "\`\`\`sh"
+        else
+           echo "\`\`\`"
+        fi
         cat $subdir
+        echo "\`\`\`"
       fi
     fi
   done
