@@ -43,11 +43,12 @@ print_title(){
   LENGTH=${#NAME}
   ADD_LENGTH=$(( $LENGTH + 11 ))
   
-  for((i=0;i<$ADD_LENGTH;i++));do echo -n '*';done
-  echo '*'
-  echo "**** "   $NAME   " ****"
-  for((i=0;i<$ADD_LENGTH;i++));do echo -n '*';done
-  echo '*'
+  #for((i=0;i<$ADD_LENGTH;i++));do echo -n '*';done
+  #echo '*'
+  #echo "**** "   $NAME   " ****"
+  #for((i=0;i<$ADD_LENGTH;i++));do echo -n '*';done
+  #echo '*'
+  echo "# "   $NAME   
 }
 
 find_subdir() {
@@ -169,7 +170,9 @@ if [ $FILE_BODY -eq 0 ]; then
     find_subdir $TPATH
 else
     FILE_BODY=0
+    echo "\`\`\`"
     find_subdir $TPATH
+    echo "\`\`\`"
     FILE_BODY=1
     find_subdir $TPATH
 
