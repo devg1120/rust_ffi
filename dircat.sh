@@ -58,7 +58,8 @@ print_memo() {
     echo ">" $DIR
     while read line
     do
-      echo "> " $line
+      #echo "> " $line
+      echo  $line
     done < $DIR
   fi
   #if [ -f $DIR/MEMO.txt ]; then
