@@ -51,6 +51,14 @@ print_title(){
   echo "# "   $NAME   
 }
 
+print_memo() {
+  #echo "subdir--" $1
+  DIR=$1
+  if [ -f $DIR/MEMO.txt ]; then
+    echo "## MEMO"
+  fi
+}
+
 find_subdir() {
   #echo "subdir--" $1
   DIR=$1
@@ -108,6 +116,9 @@ find_subdir() {
       if [ $subdir = "./dircat.sh" ]; then
          continue
       fi
+      if [ $subdir = "./MEMO.txt" ]; then
+         continue
+      fi
       #echo " " "$subdir" 
       print_filename $subdir 
       if [ $FILE_BODY -eq 1 ]; then
@@ -137,6 +148,9 @@ find_subdir() {
       fi
 
       echo "" ["$subdir" "]"
+      if [ $FILE_BODY -eq 1 ]; then
+          print_memo $sundir
+      fi
       find_subdir $subdir
     fi
 #    if [ -f "$subdir" ]; then
