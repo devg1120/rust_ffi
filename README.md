@@ -1,12 +1,10 @@
 #  rust_ffi
 ```
 ## ./test01
-
   ./test01/a.c
   ./test01/build.sh
   ./test01/main.c
 ## ./test01_shared
-
   ./test01_shared/a.c
   ./test01_shared/build.sh
   ./test01_shared/main.c

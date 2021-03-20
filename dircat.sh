@@ -129,7 +129,9 @@ find_subdir() {
       fi
       if [[ $subdir =~ MEMO\.txt ]]; then
       #if [[ $subdir =~ MEMO\.md ]]; then
-         print_memo $subdir
+         if [ $FILE_BODY -eq 1 ]; then
+           print_memo $subdir
+         fi
          continue
       fi
       #echo " " "$subdir" 
