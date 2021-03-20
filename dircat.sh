@@ -55,12 +55,12 @@ print_memo() {
   #echo "subdir--" $1
   DIR=$1
   if [ $FILE_BODY -eq 1 ]; then
-    echo "> " $DIR
-    echo ""
+    #echo "> " $DIR
+    echo -n "> "
     while read line
     do
       #echo "> " $line
-      echo  $line
+      echo  -n $line
     done < $DIR
   fi
   #if [ -f $DIR/MEMO.txt ]; then
