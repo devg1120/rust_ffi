@@ -160,7 +160,7 @@ find_subdir() {
          continue
       fi
 
-      echo ""# ["$subdir" "]"
+      echo "## "$subdir 
       #if [ $FILE_BODY -eq 1 ]; then
       #    print_memo $subdir
       #fi
