@@ -66,9 +66,16 @@ int main() {
 }
 ```
 ## ./test01_shared
-1111
-2222
-3333
+And this will produce a flow chart:
+
+```mermaid
+graph LR
+A[Square Rect] -- Link text --> B((Circle))
+A --> C(Round Rect)
+B --> D{Rhombus}
+C --> D
+```
+
 
 
 -------------------------------------------------------------  ./test01_shared/a.c
