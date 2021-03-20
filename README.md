@@ -1,10 +1,12 @@
 #  rust_ffi
 ```
 # [./test01 ]
+
   ./test01/a.c
   ./test01/build.sh
   ./test01/main.c
 # [./test01_shared ]
+
   ./test01_shared/a.c
   ./test01_shared/build.sh
   ./test01_shared/main.c
@@ -22,7 +24,11 @@
   ./test02_static/main.rs
 ```
 # [./test01 ]
-> AAABBBCCC
+> AAA
+BBB
+CCC
+
+
 --------------------------------------------------------------------  ./test01/a.c
 
 ```c
@@ -52,7 +58,11 @@ int main() {
 }
 ```
 # [./test01_shared ]
-> 111122223333
+> 1111
+2222
+3333
+
+
 -------------------------------------------------------------  ./test01_shared/a.c
 
 ```c

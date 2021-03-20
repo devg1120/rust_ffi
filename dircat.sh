@@ -60,9 +60,10 @@ print_memo() {
     while read line
     do
       #echo "> " $line
-      echo  -n $line
+      echo   $line
     done < $DIR
   fi
+  echo ""
   #if [ -f $DIR/MEMO.txt ]; then
   #  echo "## MEMO"
 
