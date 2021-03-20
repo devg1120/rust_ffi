@@ -22,6 +22,11 @@
   ./test02_static/main.rs
 ```
 # [./test01 ]
+>  ./test01/MEMO.txt
+
+> AAA
+> BBB
+> CCC
 
 --------------------------------------------------------------------  ./test01/a.c
 
@@ -52,7 +57,8 @@ int main() {
 }
 ```
 # [./test01_shared ]
-> ./test01_shared/MEMO.txt
+>  ./test01_shared/MEMO.txt
+
 1111
 2222
 3333

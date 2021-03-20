@@ -55,7 +55,8 @@ print_memo() {
   #echo "subdir--" $1
   DIR=$1
   if [ $FILE_BODY -eq 1 ]; then
-    echo ">" $DIR
+    echo "> " $DIR
+    echo ""
     while read line
     do
       #echo "> " $line
@@ -126,6 +127,7 @@ find_subdir() {
          continue
       fi
       if [[ $subdir =~ MEMO\.txt ]]; then
+      #if [[ $subdir =~ MEMO\.md ]]; then
          print_memo $subdir
          continue
       fi
