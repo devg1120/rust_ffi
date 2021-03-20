@@ -24,7 +24,7 @@
   ./test02_static/main.rs
 ```
 # [./test01 ]
-AAA
+> AAA
 
 BBB
 
