@@ -56,7 +56,7 @@ print_memo() {
   DIR=$1
   if [ $FILE_BODY -eq 1 ]; then
     #echo "> " $DIR
-    echo -n "> "
+    #echo -n "> "
     while read line
     do
       #echo "> " $line
